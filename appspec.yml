@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: html/index.php
+    destination: /var/www/html
+  - source: icon/favicon.ico
+    destination: /var/www/html
+permissions:
+  permissions-specifications
+permissions:
+  - object: /var/www/html/index.php
+    owner: ec2-user
+    group: www
+    mode: 664
+    type:
+      - file
+  - object: /var/www/html/favicon.ico
+    owner: ec2-user
+    group: www
+    mode: 664
+    type:
+      - file
