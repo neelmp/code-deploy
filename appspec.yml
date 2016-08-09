@@ -1,0 +1,36 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+permissions:
+  - object: /var/www/html/
+    pattern: "**"
+    except: [resource]
+    owner: root
+    group: www
+    mode: 755
+    type: 
+      - directory
+  - object: /var/www/html/
+    pattern: "**"
+    except: [resource]
+    owner: root
+    group: www
+    mode: 644
+    type:
+      - file
+  - object: /var/www/html/resource/
+    pattern: "**"
+    owner: apache
+    group: www
+    mode: 755
+    type: 
+      - directory
+  - object: /var/www/html/resource/
+    pattern: "**"
+    owner: apache
+    group: www
+    mode: 644
+    type:
+      - file
