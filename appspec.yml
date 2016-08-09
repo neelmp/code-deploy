@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/www/html/
 permissions:
-  - object: /var/www/html/
+  - object: /var/www/html
     pattern: "**"
     except: [resource]
     owner: root
@@ -12,7 +12,7 @@ permissions:
     mode: 755
     type: 
       - directory
-  - object: /var/www/html/
+  - object: /var/www/html
     pattern: "**"
     except: [resource]
     owner: root
@@ -20,14 +20,14 @@ permissions:
     mode: 644
     type:
       - file
-  - object: /var/www/html/resource/
+  - object: /var/www/html/resource
     pattern: "**"
     owner: ec2-user
     group: www
     mode: 755
     type: 
       - directory
-  - object: /var/www/html/resource/
+  - object: /var/www/html/resource
     pattern: "**"
     owner: ec2-user
     group: www
