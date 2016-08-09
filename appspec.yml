@@ -10,20 +10,3 @@ permissions:
     owner: ftp
     group: ftp
     mode: 755
-    type:
-      - directory
-  - object: /var/www/html
-    pattern: "**"
-    except: [resource]
-    owner: ftp
-    group: ftp
-    mode: 644
-    type:
-      - file
-  - object: /var/www/html/resource
-    pattern: "**"
-    owner: apache
-    group: apache
-    mode: 755
-    type: 
-      - directory
