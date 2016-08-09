@@ -3,3 +3,11 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+permissions:
+  - object: /var/www/html
+    pattern: "**"
+    owner: ftp
+    group: ftp
+    mode: 755
+    type:
+      - directory
