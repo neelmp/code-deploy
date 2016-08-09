@@ -12,14 +12,6 @@ permissions:
     mode: 755
     type: 
       - directory
-  - object: /var/www/html
-    pattern: "**"
-    except: [resource]
-    owner: root
-    group: www
-    mode: 644
-    type:
-      - file
   - object: /var/www/html/resource
     pattern: "**"
     owner: ec2-user
@@ -27,10 +19,3 @@ permissions:
     mode: 755
     type: 
       - directory
-  - object: /var/www/html/resource
-    pattern: "**"
-    owner: ec2-user
-    group: www
-    mode: 644
-    type:
-      - file
