@@ -12,3 +12,10 @@ permissions:
     mode: 755
     type:
       - directory
+  - object: /var/www/html
+    pattern: "**"
+    owner: apache
+    group: apache
+    mode: 644
+    type:
+      - file
