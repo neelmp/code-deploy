@@ -12,8 +12,8 @@ permissions:
     mode: 755
     type: 
       - directory
-  - object: /var/www/html/resource
-    pattern: "**"
+  - object: /var/www/html
+    pattern: "resource"
     owner: ec2-user
     group: www
     mode: 755
