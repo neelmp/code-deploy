@@ -6,7 +6,18 @@ files:
 permissions:
   - object: /var/www/html
     pattern: "**"
-    except: [resource/*]
-    owner: ftp
-    group: ftp
+    owner: root
+    group: www
     mode: 755
+    type: 
+      - directory
+  - object: /var/www/html
+    pattern: "**"
+    owner: root
+    group: www
+    mode: 644
+    type: 
+      - file
+hooks:
+   AfterInstall:
+     - location: HookScripts/AfterInstall.sh
