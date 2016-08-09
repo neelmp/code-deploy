@@ -14,9 +14,16 @@ permissions:
       - directory
   - object: /var/www/html
     pattern: "**"
-    except: [/var/www/html/resource]
-    owner: apache
-    group: apache
+    except: [resource]
+    owner: ftp
+    group: ftp
     mode: 644
     type:
       - file
+  - object: /var/www/html/resource
+    pattern: "**"
+    owner: apache
+    group: apache
+    mode: 755
+    type: 
+      - directory
