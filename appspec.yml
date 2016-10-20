@@ -6,8 +6,6 @@ files:
   - source: icon/favicon.ico
     destination: /var/www/html
 permissions:
-  permissions-specifications
-permissions:
   - object: /var/www/html/index.php
     owner: ec2-user
     group: www
